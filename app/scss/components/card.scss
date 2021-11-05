@@ -1,0 +1,31 @@
+@use '../utilities/' as *;
+
+.card {
+    width: 350px;
+    height: 374px;
+    background-color: white;
+    font-family: $Kumbh-Sans;
+    @include border-radius(rem(13));
+
+    &-head {
+        height: 285px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-clip: padding-box;
+        background: url('../../../images/bg-pattern-card.svg');
+        background-repeat: no-repeat;
+    }
+
+    &-stats {
+        display: flex;
+        justify-content: space-around;
+        border-top: 2px solid $Dark-gray;
+
+        & > div > p {
+            font-size: rem(18);
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
