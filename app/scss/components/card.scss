@@ -9,23 +9,48 @@
 
     &-head {
         height: 285px;
+        padding-top: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-clip: padding-box;
+        flex-direction: column;
         background: url('../../../images/bg-pattern-card.svg');
         background-repeat: no-repeat;
+        border-radius: inherit;
+
+        &-img {
+            @include border-radius(50%);
+            @include border-solid(5px, white);
+        }
+
+        &-name {
+            margin-bottom: 0;
+            font-size: rem(18);
+
+            & > span{
+                font-weight: normal;
+            }
+        }
+
+        & > p {
+            margin-top: 10px;
+        }
     }
 
     &-stats {
+        text-align: center;
         display: flex;
         justify-content: space-around;
-        border-top: 2px solid $Dark-gray;
+        border-top: 1px solid $Dark-gray;
+
+        &-count {
+            font-size: rem(18);
+            margin-bottom: 5px;
+        }
 
         & > div > p {
-            font-size: rem(18);
-            font-weight: 700;
-            text-align: center;
+            font-size: rem(13);
+            margin: 0 0 0 0;
         }
     }
 }
